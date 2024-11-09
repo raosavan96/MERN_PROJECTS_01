@@ -5,12 +5,11 @@ import { MDBInput, MDBTextArea } from "mdb-react-ui-kit";
 function Products() {
   const [userPro, setUserPro] = useState([]);
   const [email, setEmail] = useState("");
-  const [sub, setSub] = useState("");
   const [message, setMessage] = useState("");
 
   function queryHandle(e) {
     e.preventDefault();
-    const userQuery = { email, sub, message };
+    const userQuery = { email,  message };
     fetch(`/api/userQuerys`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -20,7 +19,6 @@ function Products() {
       .then((res) => {
         console.log(res);
         setEmail("");
-        setSub("");
         setMessage("");
       });
   }
@@ -60,16 +58,7 @@ function Products() {
                 setEmail(e.target.value);
               }}
             />
-            <MDBInput
-              className="mb-3"
-              label="Text input"
-              id="typeText"
-              type="text"
-              value={sub}
-              onChange={(e) => {
-                setSub(e.target.value);
-              }}
-            />
+           
             <MDBTextArea
               className="mb-3"
               label="Message"

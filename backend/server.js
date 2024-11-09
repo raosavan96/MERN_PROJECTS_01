@@ -6,11 +6,10 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 server.use(express.static("./public"));
 const routerApi = require("./router/api");
-const e = require("express");
 
 mongoose
   .connect(
-    "mongodb+srv://savanyadav377:mpL6zXCnpk6b3lP9@cluster1.n6tmj.mongodb.net/userinfo?retryWrites=true&w=majority&appName=Cluster1"
+    "mongodb+srv://savanyadav377:2tM7FEXCIuVnJDxB@mernprojectone.lxorn.mongodb.net/mern_project_01?retryWrites=true&w=majority&appName=MernProjectOne"
   )
   .then(() => {
     console.log("Successfully connected DB...");

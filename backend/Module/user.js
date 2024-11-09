@@ -10,4 +10,4 @@ const userSchema = new Schema({
   userstatus: { type: String, default: "Active" }
 });
 
-module.exports = model("mernprectic", userSchema);
+module.exports = model("userinfo", userSchema);

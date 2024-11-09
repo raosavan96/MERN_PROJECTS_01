@@ -50,10 +50,9 @@ exports.updatedItemControl = async (req, res) => {
 };
 
 exports.userQueryControl = async (req, res) => {
-  const { email, sub, message } = req.body;
+  const { email, message } = req.body;
   const userQuery = new userQueryCollecation({
     email: email,
-    sub: sub,
     message: message
   });
 
